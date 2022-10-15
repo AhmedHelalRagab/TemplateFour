@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>How to resize an image in HTML?</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/blog/assets/built/screen.css?v=edea79832e" />
+
+    <meta name="description" content="Learn different techniques to resize images in HTML, when you should avoid browser-side resizing, and the right way to manipulate &amp; serve images on the web." />
+    <link rel="icon" href="/blog/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://imagekit.io/blog/how-to-resize-image-in-html/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://imagekit.io/blog/how-to-resize-image-in-html/amp/" />
+    
+    <meta property="og:site_name" content="ImageKit.io Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to resize an image in HTML?" />
+    <meta property="og:description" content="Learn different techniques to resize images in HTML, when you should avoid browser-side resizing, and the right way to manipulate &amp; serve images on the web." />
+    <meta property="og:url" content="https://imagekit.io/blog/how-to-resize-image-in-html/" />
+    <meta property="og:image" content="https://imagekit.io/blog/content/images/2020/12/image-resizing-html.jpg" />
+    <meta property="article:published_time" content="2020-12-10T07:04:54.000Z" />
+    <meta property="article:modified_time" content="2022-01-12T14:43:34.000Z" />
+    <meta property="article:tag" content="Image resizing" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/imagekit.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to resize an image in HTML?" />
+    <meta name="twitter:description" content="Learn different techniques to resize images in HTML, when you should avoid browser-side resizing, and the right way to manipulate &amp; serve images on the web." />
+    <meta name="twitter:url" content="https://imagekit.io/blog/how-to-resize-image-in-html/" />
+    <meta name="twitter:image" content="https://imagekit.io/blog/content/images/2020/12/image-resizing-html.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Manu Chaudhary" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Image resizing" />
+    <meta name="twitter:site" content="@imagekitio" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="1111" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "ImageKit.io Blog",
+        "url": "https://imagekit.io/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://imagekit.io/blog/content/images/2019/12/imagekit_logo_white_ByShl3Gem-1.png",
+            "width": 260,
+            "height": 53
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Manu Chaudhary",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://imagekit.io/blog/content/images/2019/12/linkedin_3-100x100-2.jpg",
+            "width": 100,
+            "height": 100
+        },
+        "url": "https://imagekit.io/blog/author/manu/",
+        "sameAs": []
+    },
+    "headline": "How to resize an image in HTML?",
+    "url": "https://imagekit.io/blog/how-to-resize-image-in-html/",
+    "datePublished": "2020-12-10T07:04:54.000Z",
+    "dateModified": "2022-01-12T14:43:34.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://imagekit.io/blog/content/images/2020/12/image-resizing-html.jpg",
+        "width": 2000,
+        "height": 1111
+    },
+    "keywords": "Image resizing",
+    "description": "Learn different techniques to resize images in HTML, when you should avoid browser-side resizing, and the right way to manipulate &amp; serve images on the web.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://imagekit.io/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 4.41" />
+    <link rel="alternate" type="application/rss+xml" title="ImageKit.io Blog" href="https://imagekit.io/blog/rss/" />
+    
+    <script defer src="/blog/public/cards.min.js?v=edea79832e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+    <link rel="stylesheet" type="text/css" href="/blog/public/cards.min.css?v=edea79832e">
+
+</head>
+
+<body class="post-template tag-image-resizing">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header">
+    <div class="outer site-nav-main">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left-wrapper">
+        <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://imagekit.io"><img src="https://imagekit.io/blog/content/images/2019/12/imagekit_logo_white_ByShl3Gem-1.png" alt="ImageKit.io Blog" /></a>
+            <div class="site-nav-content">
+                    <ul class="nav">
+    <li class="nav-features"><a href="https://imagekit.io/features">Features</a></li>
+    <li class="nav-pricing"><a href="https://imagekit.io/plans">Pricing</a></li>
+    <li class="nav-case-studies"><a href="https://imagekit.io/customers">Case studies</a></li>
+    <li class="nav-developers-docs"><a href="https://docs.imagekit.io/">Developers docs</a></li>
+</ul>
+
+                    <span class="nav-post-title ">How to resize an image in HTML?</span>
+            </div>
+        </div>
+    </div>
+    <div class="site-nav-right">
+            <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/imagekit.io/" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm5.204 4.911h-3.546c-2.103 0-4.443.885-4.443 3.934.01 1.062 0 2.08 0 3.225h-2.433v3.872h2.509v11.147h4.61v-11.22h3.042l.275-3.81h-3.397s.007-1.695 0-2.187c0-1.205 1.253-1.136 1.329-1.136h2.054V4.911z" /></svg></a>
+                    <a class="social-link social-link-tw" href="https://twitter.com/imagekitio" title="Twitter" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            </div>
+                <a class="rss-button" href="https://feedly.com/i/subscription/feed/https://imagekit.io/blog/rss/" title="RSS" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+    </div>
+</nav>
+    </div>
+</div></header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-image-resizing ">
+
+            <header class="post-full-header">
+
+                <section class="post-full-tags">
+                    <a href="/blog/tag/image-resizing/">Image resizing</a>
+                </section>
+
+                <h1 class="post-full-title">How to resize an image in HTML?</h1>
+
+                <p class="post-full-custom-excerpt">Learn different techniques to resize images in HTML, when you should avoid browser-side resizing, and the right way to manipulate &amp; serve images on the web.</p>
+
+                <div class="post-full-byline">
+
+                    <section class="post-full-byline-content">
+
+                        <ul class="author-list">
+                            <li class="author-list-item">
+
+                                <div class="author-card">
+                                    <img class="author-profile-image" src="/blog/content/images/size/w100/2019/12/linkedin_3-100x100-2.jpg" alt="Manu Chaudhary" />
+                                    <div class="author-info">
+                                        <h2>Manu Chaudhary</h2>
+                                        <p>Read <a href="/blog/author/manu/">more posts</a> by this author.</p>
+                                    </div>
+                                </div>
+
+                                <a href="/blog/author/manu/" class="author-avatar">
+                                    <img class="author-profile-image" src="/blog/content/images/size/w100/2019/12/linkedin_3-100x100-2.jpg" alt="Manu Chaudhary" />
+                                </a>
+
+                            </li>
+                        </ul>
+
+                        <section class="post-full-byline-meta">
+                            <h4 class="author-name"><a href="/blog/author/manu/">Manu Chaudhary</a></h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2022-01-12">12 Jan 2022</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 9 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <aside class="toc-container">
+                    <h2>Table of contents</h2>
+                    <div class="toc"></div>
+                </aside>
+                <div class="floating-sidebar">
+                    <div class="title">
+                        Try ImageKit.io
+                    </div>
+                    <div class="description">
+                        Automate image optimization and resizing.
+                    </div>
+                    <a href="https://imagekit.io/registration"><div class="button">Sign-up</div></a>
+                    <div class="divider"></div>
+                    <div class="social-share">
+                        <a class="twitter">
+                            <img src="https://ik.imagekit.io/demo/img/share-this-assets/twitter_NVlWn-SXm7.svg">
+                        </a>
+                        <a class="facebook">
+                            <img src="https://ik.imagekit.io/demo/img/share-this-assets/facebook_HNS46FETl.svg">
+                        </a>
+                        <a class="linkedin">
+                            <img class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/demo/img/share-this-assets/linkedin_2D5N9CsgHm.svg">
+                        </a>
+                        <a class="reddit">
+                            <img class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/demo/img/share-this-assets/reddit_lyB-FSIeLD.svg">
+                        </a>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>If your image doesn’t fit the layout, you can resize it in the HTML. One of the simplest ways to resize an image in the HTML is using the <code>height</code> and <code>width</code> attributes on the <code>img</code> tag. These values specify the height and width of the image element. The values are set in px i.e. CSS pixels.</p><p>For example, the original image is 640×960.</p><pre><code class="language-bash">https://ik.imagekit.io/ikmedia/women-dress-2.jpg</code></pre><!--kg-card-begin: html--><img class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg" /><!--kg-card-end: html--><p>We can render it with a height of 500 pixels and a width of 400 pixels</p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg" 
+     width="400" 
+     height="500" /&gt;</code></pre><!--kg-card-begin: html--><img width="400" height="500" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/women-dress-2.jpg" /><!--kg-card-end: html--><p>If the image element's required height and width don’t match the image's actual dimensions, then the browser downscales (or upscale) the image. The exact algorithm used by the browser for scaling can vary and depends on the underlying hardware and OS.</p><blockquote>There are a couple of downsides of client-side image resizing, mainly poor image quality and slower image rendering. To overcome this, you should serve already resized images from the server. You can use Thumbor or a <a href="https://imagekit.io/registration">free image CDN</a> like ImageKit.io to resize images dynamically using URL parameters.</blockquote><h2 id="resizing-an-image-in-css">Resizing an image in CSS</h2><p>You can also specify the height and width in CSS.</p><pre><code class="language-css">img {
+  width: 400px,
+  height: 300px
+}</code></pre><h2 id="preserving-the-aspect-ratio-while-resizing-images">Preserving the aspect ratio while resizing images</h2><p>When you specify both <code>height</code> and <code>width</code>, the image might lose its aspect ratio. You can preserve the aspect ratio by specifying only <code>width</code> and setting <code>height</code> to <code>auto</code> using CSS property.</p><pre><code class="language-css">img {
+  width: 400px,
+  height: auto
+}
+</code></pre><p></p><p>This will render a 400px wide image. The height is adjusted accordingly to preserve the aspect ratio of the original image. You can also specify the <code>height</code> attribute and set <code>width</code> as <code>auto</code>, but most layouts are generally width constrained and not height.</p><h2 id="responsive-image-which-adjusts-based-on-available-width">Responsive image which adjusts based on available width</h2><p>You can specify the width in percentage instead of an absolute number to make it responsive. By setting <code>width</code> to <code>100%</code>, the image will scale up if required to match the parent element’s width. It might result in a blurred image as the image can be scaled up to be larger than its original size.</p><pre><code class="language-css">img {
+  width: 100%;
+  height: auto;
+}
+</code></pre><p></p><p>Alternatively, you can use the <code>max-width</code> property. By setting </p><pre><code class="language-css">max-width:100%;</code></pre><p></p><p>the image will scale down if it has to, but never scale up to be larger than its original size.</p><pre><code class="language-css">img {
+  max-width: 100%;
+  height: auto;
+}
+</code></pre><h2 id="how-to-resize-crop-image-to-fit-an-element-area">How to resize &amp; crop image to fit an element area?</h2><p>So far, we have discussed how to resize an image by specifying <code>height</code> or <code>width</code> or both of them.</p><p>When you specify both <code>height</code> and <code>width</code>, the image is forced to fit the requested dimension. It could change the original aspect ratio. At times, you want to preserve the aspect ratio while the image covers the whole area even if some part of the image is cropped. To achieve this, you can use:</p><ul><li>Background image</li><li><code>object-fit</code> css property</li></ul><h2 id="resizing-background-image">Resizing background image</h2><p><code>background-image</code> is a very powerful CSS property that allows you to insert images on elements other than <code>img</code>. You can control the resizing and cropping of the image using the following CSS attributes-</p><ul><li><code>background-size</code> - Size of the image</li><li><code>background-position</code> - Starting position of a background image</li></ul><p><strong>background-size</strong><br>By default, the background image is rendered at its original full size. You can override this by setting the height and width using the <code>background-size</code> CSS property.  You can scale the image upward or downward as you wish.</p><pre><code class="language-css">&lt;style&gt;
+.background {
+  background-image: url("/image.jpg");
+  background-size: 150px;
+  width: 300px;
+  height: 300px;
+  border: solid 2px red;
+}
+&lt;/style&gt;
+
+&lt;div class="background"&gt;
+&lt;/div&gt;
+</code></pre><p></p><p>Possible values of <code>background-size</code>:</p><ul><li><code>auto</code> - Renders the image at full size</li><li><code>length</code> - Sets the width and height of the background image. The first value sets the width, and the second value sets the height. If only one value is given, the second is set to <code>auto</code>. For example, <code>100px 100px</code> or <code>50px</code>.</li><li><code>percentage</code> - Sets the width and height of the background image in percent of the parent element. The first value sets the width, and the second value sets the height. If only one value is given, the second is set to <code>auto</code>. For example, <code>100% 100%</code> or <code>50%</code>.</li></ul><p>It also has 2 special values <code>contain</code> and <code>cover</code>:</p><p><strong><strong>background-size:contains</strong></strong><br><code>contains</code> - It preserves the original aspect ratio of the image, but the image is resized so that it is fully visible. The longest of either the height or width will fit in the given dimensions, regardless of the size of the containing box.</p><pre><code class="language-css">&lt;style&gt;
+.background {
+  background-image: url("/image.jpg");
+  background-size: contains;
+  width: 300px;
+  height: 300px;
+  border: solid 2px red;
+}
+&lt;/style&gt;
+
+&lt;div class="background"&gt;
+&lt;/div&gt;
+</code></pre><p></p><p><strong><strong>background-size:cover</strong></strong><br><code>cover</code> - It preserves the original aspect ratio but resizes the image to cover the entire container, even if it has to upscale the image or crop it.</p><pre><code class="language-css">&lt;style&gt;
+.background {
+  background-image: url("/image.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border: solid 2px red;
+}
+&lt;/style&gt;
+
+&lt;div class="background"&gt;
+&lt;/div&gt;
+</code></pre><h2 id="object-fit-css-property">object-fit CSS property</h2><p>You can use the <code>object-fit</code> CSS property on the <code>img</code> element to specify how the image should be resized &amp; cropped to fit the container. Before this CSS property was introduced, we had to resort to using a background image.</p><p>Along with <code>inherit</code>, <code>initial</code>, and <code>unset</code>, there are 5 more possible values for object-fit:</p><ul><li><code>contain</code>: It preserves the original aspect ratio of the image, but the image is resized so that it is fully visible. The longest of either the height or width will fit in the given dimensions, regardless of the size of the containing box.</li><li><code>cover</code>: It preserves the original aspect ratio but resizes the image to cover the entire container, even if it has to upscale the image or crop it.</li><li><code>fill</code>: This is the default value. The image will fill its given area, even if it means losing its aspect ratio.</li><li><code>none</code>: The image is not resized at all, and the original image size fills the given area.</li><li><code>scale-down</code>: The smaller of either <strong><strong>contain</strong></strong> or <strong><strong>none</strong></strong>.</li></ul><p>You can use <code>object-position</code> to control the starting position of the image in case a cropped part of the image is being rendered.</p><p>Let’s understand these with examples.</p><p>The following image’s original width is 1280px and height is 854px. Here it is stretching to maximum available width using <code>max-width: 100%</code>.</p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+     style="max-width: 100%;" /&gt;</code></pre><!--kg-card-begin: html--><img style="max-width: 100%;" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" /><!--kg-card-end: html--><p><strong><strong>object-fit:contains</strong></strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:contain;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><p></p><p>The original aspect ratio of the image is same, but the image is resized so that it is fully visible. We have added <code>1px</code> border around the image to showcase this.</p><!--kg-card-begin: html--><img style="object-fit:contain;width:200px;height:300px;border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><p><strong><strong>object-fit:cover</strong></strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:cover;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><p>The original aspect ratio is preserved but to cover the whole area image is clipped from the left and right side.</p><!--kg-card-begin: html--><img style="object-fit:cover;width:200px;height:300px;border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><p><strong><strong>object-fit:fill</strong></strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:fill;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><p>Image is forced to fit into a 200px wide container with height 300px, the original aspect ratio is not preserved.</p><!--kg-card-begin: html--><img style="object-fit:fill;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><p><strong><strong>object-fit:none</strong></strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:none;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><!--kg-card-begin: html--><img style="object-fit:none;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><p><strong><strong>object-fit:scale-down</strong></strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:scale-down;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><!--kg-card-begin: html--><img style="object-fit:scale-down;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><p><strong><strong>object-fit:cover and object-position</strong>:right</strong></p><pre><code class="language-html">&lt;img src="https://ik.imagekit.io/ikmedia/backlit.jpg" 
+	 style="object-fit:cover;
+     		object-position: right;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC"/&gt;
+</code></pre><!--kg-card-begin: html--><img style="object-fit:cover;
+     		object-position: right;
+            width:200px;
+            height:300px;
+            border: solid 1px #CCC" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/backlit.jpg" />
+<!--kg-card-end: html--><h2 id="downsides-of-client-side-image-resizing">Downsides of client-side image resizing</h2><p>There are certain downsides of client-side resizing that you should keep in mind.</p><h3 id="1-slow-image-rendering">1. Slow image rendering</h3><p>Since the full-sized image is loaded anyway before resizing happens in the browser, it takes more time to finish downloading and finally rendering. This means that if you have a large, 1.5 megabyte, 1024×682 photograph that you are displaying at 400px in width, the whole 1.5-megabyte image is downloaded by the visitor before the browser resizes it down to 400px.</p><p>You can see this download time on the network panel, as shown in the screenshot below.</p><figure class="kg-card kg-image-card"><img src="https://imagekit.io/blog/content/images/2020/12/Screenshot-2020-12-08-at-11.03.53-AM.png?tr=q-10" class="kg-image ws-lazy-load" alt loading="lazy" data-ws-src="https://imagekit.io/blog/content/images/2020/12/Screenshot-2020-12-08-at-11.03.53-AM.png"></figure><p>On the other hand, if you resize the image on the server using some program or an <a href="https://imagekit.io/registration">image CDN</a>, then the browser doesn't have to load a large amount of data and waste time decoding &amp; rendering it.</p><p>With ImageKit.io, you can easily resize an image using <a href="https://docs.imagekit.io/features/image-transformations/resize-crop-and-other-transformations">URL parameters</a>. For example -</p><p><strong>Original image</strong><br>https://ik.imagekit.io/ikmedia/women-dress-2.jpg</p><p><strong>400px wide image with aspect ratio preserved</strong><br>https://ik.imagekit.io/ikmedia/women-dress-2.jpg?<strong>tr=w-400</strong></p><h3 id="2-poor-image-quality">2. Poor image quality</h3><p>The exact scaling algorithm used by the browser can vary, and its performance depends upon underlying hardware and OS. When a relatively bigger image is resized to fit a smaller container, the final image could be noticeably blurry.</p><p>There is a tradeoff between speed and quality. The final choice depends upon the browser. Firefox 3.0 and later versions use a bilinear resampling algorithm, which is tuned for high quality rather than speed. But this could vary.</p><p>You can use the <code>image-rendering</code> CSS property, which defines how the browser should render an image if it is scaled up or down from its original dimensions.</p><pre><code class="language-css">/* Keyword values */
+image-rendering: auto;
+image-rendering: crisp-edges;
+image-rendering: pixelated;
+
+/* Global values */
+image-rendering: inherit;
+image-rendering: initial;
+image-rendering: unset;
+</code></pre><p></p><h3 id="3-bandwidth-wastage">3. Bandwidth wastage</h3><p>Since the full-sized image is being loaded anyway, it results in wastage of bandwidth, which could have been saved. Data transfer is not cheap. In addition to increasing your bandwidth bills, it also costs your users real money.</p><p>If you are using an image CDN, you can further reduce your bandwidth consumption by <a href="https://imagekit.io/features/automatic-image-optimization/">serving images in next-gen formats</a> e.g. WebP or AVIF.</p><p>The user friendly dashboard will also show you how much bandwidth you have saved so far</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://imagekit.io/blog/content/images/2020/12/savings-2x_RoS61Oi3sy.png?tr=q-10" class="kg-image ws-lazy-load" alt loading="lazy" data-ws-src="https://imagekit.io/blog/content/images/2020/12/savings-2x_RoS61Oi3sy.png"><figcaption>See the actual savings in the ImageKit dashboard</figcaption></figure><h3 id="4-increased-memory-and-processing-requirements-on-client-devices">4. Increased memory and processing requirements on client devices</h3><p>Resizing large images to fit a smaller container is expensive and can be painful on low-end devices where both memory and processing power is limited. This slows down the whole web page and degrades the user experience.</p><h2 id="summary">Summary</h2><p>When implementing web pages, images need to fit the layout perfectly. Here is what you need to remember to be able to implement responsive designs:</p><ul><li>Avoid client-side (browser) resizing at all if you can. This means serve correctly sized images from the server. It results in less bandwidth usage, faster image loading, and higher image quality. There are many open-source image processing libraries if you want to implement it yourself. Or better, you can use a <a href="https://stage.imagekit.io/registration">free image CDN</a> which will provide all these features and much more with a few lines of code.</li><li>Never upscale a raster image i.e. JPEG, PNG, WebP, or AVIF images, should never be upscaled as it will result in a blurred output.</li><li>You should use the SVG format for icons and graphics if required in multiple dimensions in the design.</li><li>While resizing, if you want to preserve the aspect ratio of original images - Only specify one of <code>width</code> and <code>height</code> and set the other to <code>auto</code>.</li><li>If you want the image to fit the entire container while preserving the aspect ratio, even if some part is cropped or the image is upscaled - Use the <code>object-fit</code> CSS property or set a background image using the <code>background-image</code> CSS property.</li><li>Control the starting position of the image using <code>object-position</code> while using <code>object-fit</code>. In background images, use <code>background-position</code>.</li></ul>
+                </div>
+            </section>
+
+
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card">
+                    <header class="read-next-card-header">
+                        <h3><span>More in</span> <a href="/blog/tag/image-resizing/">Image resizing</a></h3>
+                    </header>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li>
+                                <h4><a href="/blog/image-resizing-in-python/">Image Resizing in Python explained</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2022-04-08">8 Apr 2022</time> –
+                                        10 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="/blog/resize-images-in-angular/">How to Resize Images in Angular in Real-time using ImageKit</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2021-08-04">4 Aug 2021</time> –
+                                        11 min read</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4><a href="/blog/optimize-and-resize-images-in-firebase-storage/">Optimize and resize images in Firebase storage using ImageKit</a></h4>
+                                <div class="read-next-card-meta">
+                                    <p><time datetime="2021-07-30">30 Jul 2021</time> –
+                                        9 min read</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="/blog/tag/image-resizing/">See all 11 posts
+                            →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-image-resizing ">
+
+    <a class="post-card-image-link" href="/blog/image-resizing-in-java/">
+        <img class="post-card-image ws-lazy-load" src="/blog/content/images/size/w600/2020/12/image-resizing-java.jpg?tr=q-10" alt="Image resizing in Java" data-ws-src="/blog/content/images/size/w600/2020/12/image-resizing-java.jpg" data-ws-srcset="/blog/content/images/size/w300/2020/12/image-resizing-java.jpg 300w,
+                    /blog/content/images/size/w600/2020/12/image-resizing-java.jpg 600w,
+                    /blog/content/images/size/w700/2020/12/image-resizing-java.jpg 700w,
+                    /blog/content/images/size/w1000/2020/12/image-resizing-java.jpg 1000w,
+                    /blog/content/images/size/w2000/2020/12/image-resizing-java.jpg 2000w" data-ws-sizes="(max-width: 1000px) 400px, 700px" />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/blog/image-resizing-in-java/">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Image resizing</div>
+                <h2 class="post-card-title">Image resizing in Java</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Learn how to resize images in Java using different techniques and their pros and cons.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Manu Chaudhary
+                    </div>
+            
+                    <a href="/blog/author/manu/" class="static-avatar">
+                        <img class="author-profile-image ws-lazy-load" src="/blog/content/images/size/w100/2019/12/linkedin_3-100x100-2.jpg?tr=q-10" alt="Manu Chaudhary" data-ws-src="/blog/content/images/size/w100/2019/12/linkedin_3-100x100-2.jpg" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/blog/author/manu/">Manu Chaudhary</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-12-15">15 Dec 2020</time> <span class="bull">&bull;</span> 9 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post tag-media-library tag-digital-asset-management ">
+
+    <a class="post-card-image-link" href="/blog/marketing-content-teams-use-imagekit-media-library/">
+        <img class="post-card-image ws-lazy-load" src="/blog/content/images/size/w600/2020/10/high_quality_images__1__It2FVtquX.jpg?tr=q-10" alt="How marketing and content teams can use ImageKit&#x27;s media library" data-ws-src="/blog/content/images/size/w600/2020/10/high_quality_images__1__It2FVtquX.jpg" data-ws-srcset="/blog/content/images/size/w300/2020/10/high_quality_images__1__It2FVtquX.jpg 300w,
+                    /blog/content/images/size/w600/2020/10/high_quality_images__1__It2FVtquX.jpg 600w,
+                    /blog/content/images/size/w700/2020/10/high_quality_images__1__It2FVtquX.jpg 700w,
+                    /blog/content/images/size/w1000/2020/10/high_quality_images__1__It2FVtquX.jpg 1000w,
+                    /blog/content/images/size/w2000/2020/10/high_quality_images__1__It2FVtquX.jpg 2000w" data-ws-sizes="(max-width: 1000px) 400px, 700px" />
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/blog/marketing-content-teams-use-imagekit-media-library/">
+
+            <header class="post-card-header">
+                    <div class="post-card-primary-tag">Media Library</div>
+                <h2 class="post-card-title">How marketing and content teams can use ImageKit&#x27;s media library</h2>
+            </header>
+
+            <section class="post-card-excerpt">
+                    <p>Given the explosion in the amount of content getting created, ImageKit's Media Library gives teams new scalable ways to manage digital assets.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+            <ul class="author-list">
+                <li class="author-list-item">
+            
+                    <div class="author-name-tooltip">
+                        Rahul Nanwani
+                    </div>
+            
+                    <a href="/blog/author/rahul/" class="static-avatar">
+                        <img class="author-profile-image ws-lazy-load" src="/blog/content/images/size/w100/2019/12/rahul-linkedin_1-100x100.jpg?tr=q-10" alt="Rahul Nanwani" data-ws-src="/blog/content/images/size/w100/2019/12/rahul-linkedin_1-100x100.jpg" />
+                    </a>
+                </li>
+            </ul>
+            <div class="post-card-byline-content">
+                <span><a href="/blog/author/rahul/">Rahul Nanwani</a></span>
+                <span class="post-card-byline-date"><time datetime="2020-10-15">15 Oct 2020</time> <span class="bull">&bull;</span> 7 min read</span>
+            </div>
+        </footer>
+
+    </div>
+
+</article>
+        </div>
+    </div>
+</aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="container">
+                <div class="cta-section">
+                    <h2>Free until you’re ready to upgrade to the Premium plan</h2>
+                    <a href="https://imagekit.io/registration"><button>GET STARTED FOR FREE</button></a>
+                </div>
+                <hr>
+                <div class="logo-container">
+                    <a href="https://imagekit.io">
+                        <img width="158" alt="ImageKit.io logo" class="ws-lazy-load" data-ws-src="https://ik.imagekit.io/ikmedia/site_graphics/imagekit_white_logo_2x_qSU--bCEr.png">
+                    </a>
+                </div>
+                <div class="columns">
+                    <div class="column-specs">
+                        <div class="col-heading">USE CASES</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/use-cases/thumbnail-creation">Thumbnail creation</a></li>
+                            <li><a href="https://imagekit.io/use-cases/image-optimization">Image Optimization</a></li>
+                            <li><a href="https://imagekit.io/use-cases/content-aware-smart-crop/">Content aware smart cropping</a></li>
+                            <li><a href="https://imagekit.io/use-cases/web-performance-seo">Search engine optimization</a></li>
+                            <li><a href="https://imagekit.io/use-cases/file-upload/">File Upload</a></li>
+                            <li><a href="https://imagekit.io/use-cases/secure-file-access">Secure file access</a></li>
+                            <li><a href="https://imagekit.io/use-cases/personalized-email-and-marketing-banners">Email marketing banners</a></li>
+                        </ul>
+                    </div>
+                    <div class="column-specs">
+                        <div class="col-heading">FEATURES</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/features/image-transformation">Image transformation</a></li>
+                            <li><a href="https://imagekit.io/features/automatic-image-optimization">Automatic image optimization</a></li>
+                            <li><a href="https://imagekit.io/features/external-storage-integrations">External storage integrations</a></li>
+                            <li><a href="https://imagekit.io/features/media-storage">Media storage</a></li>
+                            <li><a href="https://imagekit.io/features/cdn-and-processing-infrastructure">Global CDN and image processing infrastructure</a></li>
+                            <li><a href="https://imagekit.io/features/powerful-analytics">Powerful analytics</a></li>
+                            <li><a href="https://imagekit.io/features/performance-monitoring">Performance monitoring</a></li>
+                        </ul>
+                    </div>
+                    <div class="column-specs">
+                        <div class="col-heading">RESOURCES</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/plans">Pricing Plans</a></li>
+                            <li><a href="https://imagekit.io/customers">Customers</a></li>
+                            <li><a href="https://imagekit.io/website-analyzer">Website Analyzer</a></li>
+                            <li><a href="https://imagekit.io/blog" target="_blank">Blog</a></li>
+                            <li><a href="https://docs.imagekit.io" target="_blank">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="column-specs">
+                        <div class="col-heading">COMPANY</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/about">About Us</a></li>
+                            <li><a href="https://imagekit.io/terms">Terms</a></li>
+                            <li><a href="https://imagekit.io/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="https://imagekit.io/gdpr">GDPR Policy</a></li>
+                            <li><a href="https://imagekit.io/disclaimer">Disclaimer</a></li>
+                            <li><a href="https://imagekit.io/contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="column-specs">
+                        <div class="col-heading">COMPARISON</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/imgix-alternative">ImageKit vs Imgix</a></li>
+                            <li><a href="https://imagekit.io/cloudinary-alternative">ImageKit vs Cloudinary</a></li>
+                            <li><a href="https://imagekit.io/sirv-alternative">ImageKit vs Sirv</a></li>
+                        </ul>
+                    </div>
+                    <div class="column-specs">
+                        <div class="col-heading">CONTACT</div>
+                        <ul class="list">
+                            <li><a href="https://imagekit.io/contact-us">Contact Us</a></li>
+                            <li><a href="mailto:support@imagekit.io">support@imagekit.io</a></li>
+                            <li><b>India office</b><br>ImageKit Private Limited<br>Caddie Commercial Tower, 5th floor, Aerocity, New Delhi, Delhi 110037, India</li>
+                            <li><b>US office</b><br>ImageKit Inc<br>Christiana Corporate Business Center, 200 Continental Drive, Suite 401, Newark, DE, 19713, USA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright © ImageKit Private Limited 2022</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script src="/blog/assets/built/casper.js?v=edea79832e"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        $(document).ready(function () {
+            if (action == 'subscribe') {
+                $('body').addClass("subscribe-success");
+            }
+
+            $('.subscribe-success-message .subscribe-close').click(function () {
+                $('.subscribe-success-message').addClass('close');
+            });
+
+            // Reset form on opening subscrion overlay
+            $('.subscribe-button').click(function () {
+                $('.subscribe-overlay form').removeClass();
+                $('.subscribe-email').val('');
+            });
+        });
+    </script>
+
+    <script>
+        
+        var customTocContainer = $(".custom.toc-container");
+
+        if(customTocContainer.length) {
+            var tocContainer = ".custom.toc-container";
+            var toc = ".custom.toc-container .toc";
+            tocbot.init({
+                tocSelector: toc,
+                contentSelector: '.post-content',
+                orderedList: false,
+                hasInnerContainers: false,
+                collapseDepth: 4,
+            });
+            $(tocContainer).show();
+            $(".toc-list-item")[0].remove();
+        };
+
+	</script>
+    <script>
+    $(document).ready(function () {
+        // FitVids - start
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+        // FitVids - end
+
+        // Replace nav with title on scroll - start
+        Casper.stickyNavTitle({
+            navSelector: '.site-nav-main',
+            titleSelector: '.post-full-title',
+            activeClass: 'nav-post-title-active'
+        });
+        // Replace nav with title on scroll - end
+
+        // Hover on avatar
+        var hoverTimeout;
+        $('.author-list-item').hover(function () {
+            var $this = $(this);
+
+            clearTimeout(hoverTimeout);
+
+            $('.author-card').removeClass('hovered');
+            $(this).children('.author-card').addClass('hovered');
+
+        }, function () {
+            var $this = $(this);
+
+            hoverTimeout = setTimeout(function () {
+                $this.children('.author-card').removeClass('hovered');
+            }, 800);
+        });
+    });
+</script>
+
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5TRRPX4');</script>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TRRPX4"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+<!-- Image click zoom feature -->
+<script async src="https://cdn.jsdelivr.net/gh/coreysnyder04/fluidbox-ghost-blog-plugin@0.1.0/fluidbox-ghost-blog-plugin.min.js"></script>
+<script>
+    window.fluidboxGhostConfig = {
+      theme: '#FFF'
+    }
+</script>
+<!-- Syntax highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<script>
+    Prism.highlightAll()
+</script>
+<!-- Text select options -->
+<link rel="stylesheet" type="text/css" href="https://ik.imagekit.io/demo/img/share-this-assets/share-this_r5jlp8jRr.css">
+<script src="https://ik.imagekit.io/demo/img/share-this-assets/share-this-bundle_p1P_6Xk-v.js"></script>
+<script>
+    // Link open in new tab
+    $(document).ready(function() {
+                $(".post-content a[href^='http']").attr("target","_blank");
+        });
+</script>
+<style>
+    .share-this-popover {
+        z-index:100000000;
+    }
+    .share-this-popover li {
+        line-height: 1 !important;
+        margin:0;
+        padding:0;
+        background: #333;
+    }
+    .share-this-popover li:first-child {
+        border-top-left-radius:.25em;
+        border-bottom-left-radius:.25em;
+    }
+    .share-this-popover li:last-child {
+        border-top-right-radius:.25em;
+        border-bottom-right-radius:.25em;
+    }
+</style>
+<script>
+    var selectionShare = ShareThis({
+        selector: ".post-content",
+        sharers: [ShareThisViaTwitter, ShareThisViaFacebook, ShareThisViaReddit, ShareThisViaEmail]
+    });
+    selectionShare.init();
+</script>
+<!-- Social sharing -->
+<script>
+    function socialWindow(url) {
+        var left = (screen.width - 570) / 2;
+        var top = (screen.height - 570) / 2;
+        var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
+        window.open(url,"NewWindow",params);
+    }
+    var pageUrl = encodeURIComponent(document.URL);
+    var tweet = encodeURIComponent(jQuery("meta[property='og:description']").attr("content"));
+    jQuery(".social-share .facebook").on("click", function() {
+        url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
+        socialWindow(url);
+    });
+    jQuery(".social-share .twitter").on("click", function() {
+        url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
+        socialWindow(url);
+    });
+    jQuery(".social-share .linkedin").on("click", function() {
+        url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
+        socialWindow(url);
+    })
+    jQuery(".social-share .reddit").on("click", function() {
+        url = "http://www.reddit.com/submit?url=" + pageUrl;
+        socialWindow(url);
+    })
+    function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+   function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+    var utmData = {};
+if(getParameterByName("utm_source")) {
+  utmData.utm_source = getParameterByName("utm_source");
+}
+if(getParameterByName("utm_medium")) {
+  utmData.utm_medium = getParameterByName("utm_medium");
+}
+if(getParameterByName("utm_campaign")) {
+  utmData.utm_campaign = getParameterByName("utm_campaign");
+}
+if(getParameterByName("utm_content")) {
+  utmData.utm_content = getParameterByName("utm_content");
+}
+if(!$.isEmptyObject(utmData)) {
+  setCookie("utmData", JSON.stringify(utmData), 365);
+}
+</script>
+
+<script type="text/javascript">window.__requireBackup = { define: window.define, require: window.require, requirejs: window.requirejs };for (const field of Object.keys(window.__requireBackup)) { window[field] = undefined };</script><script type="text/javascript" src="/ws-static-B1eIHG3Fym/scripts/ws-lazy-load.a2e0d1fa4b2ae08c9deeee486a265d42.js"></script><script type="text/javascript"> window.wsLazyLoadObject = new LazyLoad({ elements_selector: ".ws-lazy-load", data_src: "ws-src", data_srcset: "ws-srcset", data_sizes: "ws-sizes", use_native: true }); Object.assign(window, window.__requireBackup); delete window.__requireBackup; </script></body>
+
+</html>
